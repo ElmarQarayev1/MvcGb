@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{CBAEB162-8A90-4B9E-AD2A-5B18E5705561}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.MvcGb PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MvcGb/Data/AppDbContext.cs">
+    <Files>
+      <File FileName="MvcGb/Views/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="MvcGb/Views/_ViewImports.cshtml" Line="1" Column="13" />
+      <File FileName="MvcGb/Views/Shared/_Layout.cshtml" Line="12" Column="22" />
+      <File FileName="MvcGb/Views/Home/Index.cshtml" Line="27" Column="64" />
+      <File FileName="MvcGb/Controllers/HomeController.cs" Line="16" Column="1" />
+      <File FileName="MvcGb/Models/Category.cs" Line="11" Column="1" />
+      <File FileName="MvcGb/Models/Project.cs" Line="22" Column="1" />
+      <File FileName="MvcGb/Data/AppDbContext.cs" Line="13" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MvcGb" expanded="True">
+            <Node name="MvcGb" selected="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
