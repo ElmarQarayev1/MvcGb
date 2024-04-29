@@ -16,6 +16,10 @@ namespace MvcGb.Data
 		public DbSet<Category> Categories { get; set;}
 
 		public DbSet<ProjectImage> ProjectImages { get; set; }
+
+		public DbSet<Team> Teams { get; set; }
+
+		public DbSet<Social> Socials { get; set; }
 	}
 }
 

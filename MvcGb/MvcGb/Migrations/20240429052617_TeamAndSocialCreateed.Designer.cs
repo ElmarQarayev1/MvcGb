@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcGb.Data;
 
@@ -11,9 +12,11 @@ using MvcGb.Data;
 namespace MvcGb.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240429052617_TeamAndSocialCreateed")]
+    partial class TeamAndSocialCreateed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -97,57 +100,6 @@ namespace MvcGb.Migrations
                     b.ToTable("ProjectImages");
                 });
 
-            modelBuilder.Entity("MvcGb.Models.Social", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Icon")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Link")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TeamId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TeamId");
-
-                    b.ToTable("Socials");
-                });
-
-            modelBuilder.Entity("MvcGb.Models.Team", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ImgPath")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Position")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Teams");
-                });
-
             modelBuilder.Entity("MvcGb.Models.Project", b =>
                 {
                     b.HasOne("MvcGb.Models.Category", "Category")
@@ -170,17 +122,6 @@ namespace MvcGb.Migrations
                     b.Navigation("Project");
                 });
 
-            modelBuilder.Entity("MvcGb.Models.Social", b =>
-                {
-                    b.HasOne("MvcGb.Models.Team", "Team")
-                        .WithMany("Socials")
-                        .HasForeignKey("TeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Team");
-                });
-
             modelBuilder.Entity("MvcGb.Models.Category", b =>
                 {
                     b.Navigation("Projects");
@@ -189,11 +130,6 @@ namespace MvcGb.Migrations
             modelBuilder.Entity("MvcGb.Models.Project", b =>
                 {
                     b.Navigation("ProjectImages");
-                });
-
-            modelBuilder.Entity("MvcGb.Models.Team", b =>
-                {
-                    b.Navigation("Socials");
                 });
 #pragma warning restore 612, 618
         }
